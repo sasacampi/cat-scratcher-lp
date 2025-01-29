@@ -5,7 +5,6 @@ const Header = () => {
   const menuRef = useRef(null);
   const buttonRef = useRef(null);
 
-  // Close menu when clicking outside or pressing ESC
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (
@@ -49,12 +48,11 @@ const Header = () => {
             />
           </svg>
         </div>
-        <h2 className="text-lg font-bold leading-tight tracking-[-0.015em]">
-          ScratchMe
+        <h2 className="text-2xl font-bold leading-tight tracking-[-0.015em]">
+          Katz
         </h2>
       </div>
 
-      {/* Desktop Navigation */}
       <nav className="hidden md:flex items-center gap-8">
         <div className="flex items-center gap-9">
           <a
@@ -81,7 +79,7 @@ const Header = () => {
         </button>
       </nav>
 
-      {/* Mobile Hamburger Button */}
+      {/* mobile ham button */}
       <button
         ref={buttonRef}
         onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -113,7 +111,7 @@ const Header = () => {
         </svg>
       </button>
 
-      {/* Mobile Dropdown Menu */}
+      {/* li menu */}
       <div
         ref={menuRef}
         className={`md:hidden absolute right-0 top-full mt-2 w-48 bg-white rounded-lg shadow-xl z-50 border border-gray-100 transition-all duration-200 ${
