@@ -1,0 +1,78 @@
+import React from "react";
+
+const Footer = () => {
+  return (
+    <footer className="bg-white border-t border-[#f3ede7] mt-auto">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="space-y-4">
+            <h3 className="text-[#1b140e] text-lg font-bold mb-4">
+              About Katz
+            </h3>
+            <p className="text-[#97704e] text-sm">
+              Crafting premium cat scratchers that combine modern design with
+              feline-approved functionality.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="text-[#1b140e] text-lg font-bold mb-4">
+              Quick Links
+            </h3>
+            <ul className="space-y-2">
+              {["Shop", "Testimonials", "About", "Contact"].map((item) => (
+                <li key={item}>
+                  <a
+                    href="#"
+                    className="text-[#97704e] text-sm hover:text-[#e88630] transition-colors"
+                  >
+                    {item}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-[#1b140e] text-lg font-bold mb-4">
+              Contact Us
+            </h3>
+            <div className="space-y-2 text-[#97704e] text-sm">
+              <p>123 Catnip Street</p>
+              <p>Meowville, SP 90210</p>
+              <p>Email: hello@scratchme.com</p>
+              <p>Phone: (11) 1234-4567</p>
+            </div>
+          </div>
+
+          <div>
+            <h3 className="text-[#1b140e] text-lg font-bold mb-4">
+              Stay Updated
+            </h3>
+            <form className="space-y-3">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="w-full px-4 py-2 rounded-full border border-[#f3ede7] text-sm focus:outline-none focus:ring-2 focus:ring-[#e88630]"
+              />
+              <button
+                type="submit"
+                className="w-full bg-[#e88630] text-white text-sm font-bold py-2 px-4 rounded-full hover:bg-[#d87a28] transition-colors"
+              >
+                Subscribe
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <div className="border-t border-[#f3ede7] mt-12 pt-8 text-center">
+          <p className="text-[#97704e] text-sm">
+            © {new Date().getFullYear()} KATZ. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
