@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import MainContent from "./components/MainContent";
 import Hero from "./components/Hero";
+import Unique from "./components/Unique";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       </Routes>
       <Hero />
       <MainContent />
+      <Unique />
       <Testimonials />
       <Footer />
     </Router>
