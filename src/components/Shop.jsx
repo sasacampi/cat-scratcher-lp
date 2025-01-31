@@ -52,7 +52,7 @@ const Shop = () => {
     >
       <Header />
 
-      <div className="px-40 flex flex-1 justify-center py-5">
+      <div className="px-40 flex flex-1 justify-center pt-5">
         <div className="layout-content-container flex flex-col max-w-[960px] flex-1">
           <div className="flex flex-wrap gap-2 p-4">
             <Link
@@ -150,30 +150,25 @@ const Shop = () => {
           <h3 className="text-[#1c130d] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">
             Sort by
           </h3>
-          <div className="flex flex-col gap-3 p-4">
+          <div className="flex gap-3 p-3 flex-wrap pr-4">
             {[
               { value: "bestSelling", label: "Best Selling" },
               { value: "priceLowHigh", label: "Price (Low to High)" },
               { value: "priceHighLow", label: "Price (High to Low)" },
             ].map((option) => (
-              <label
+              <button
                 key={option.value}
-                className="flex items-center gap-4 rounded-xl border border-solid border-[#e8d9ce] p-[15px]"
+                onClick={() => setSortBy(option.value)}
+                className={`flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-xl pl-4 pr-4 ${
+                  sortBy === option.value
+                    ? "bg-[#f47b25] text-white"
+                    : "bg-[#f4ece7]"
+                }`}
               >
-                <input
-                  type="radio"
-                  className="h-5 w-5 border-2 border-[#e8d9ce] bg-transparent text-transparent checked:border-[#f47b25] checked:bg-[image:--radio-dot-svg] focus:outline-none focus:ring-0 focus:ring-offset-0 checked:focus:border-[#f47b25]"
-                  name="sort-by"
-                  value={option.value}
-                  checked={sortBy === option.value}
-                  onChange={(e) => setSortBy(e.target.value)}
-                />
-                <div className="flex grow flex-col">
-                  <p className="text-[#1c130d] text-sm font-medium leading-normal">
-                    {option.label}
-                  </p>
-                </div>
-              </label>
+                <p className="text-sm font-medium leading-normal">
+                  {option.label}
+                </p>
+              </button>
             ))}
           </div>
 

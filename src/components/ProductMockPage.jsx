@@ -16,10 +16,8 @@ const ProductMockPage = () => {
     >
       <Header />
 
-      {/* Product Container */}
       <div className="flex justify-center items-center p-8">
         <div className="max-w-5xl w-full flex flex-col md:flex-row gap-8 bg-white p-6 rounded-2xl">
-          {/* Image Gallery */}
           <div className="w-full md:w-1/2">
             <img
               src="https://cdn.usegalileo.ai/sdxl10/17ed968e-642c-4ca4-8136-cd9a5f108b71.png"
@@ -45,7 +43,6 @@ const ProductMockPage = () => {
             </div>
           </div>
 
-          {/* Product Details */}
           <div className="w-full md:w-1/2 space-y-4">
             <h2 className="text-3xl font-bold text-[#1c130d]">
               Modern Cat Scratcher Lounge
@@ -98,7 +95,6 @@ const ProductMockPage = () => {
               <p className="font-medium">In Stock - Ready to Ship</p>
             </div>
 
-            {/* Quantity Selector & Add to Cart */}
             <div className="flex items-center gap-4 mt-6">
               <div className="flex items-center border-2 border-[#e8d9ce] rounded-xl">
                 <button
