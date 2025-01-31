@@ -1,6 +1,6 @@
 # Katz - Cat Scratchers Landing Page
 
-![Screenshot de KATZ](https://i.imgur.com/fYIItum.png)
+![Screenshot de KATZ](https://i.imgur.com/7MZ4GO9.png)
 
 A modern landing page for premium cat scratchers, built with React and Tailwind CSS.
 
