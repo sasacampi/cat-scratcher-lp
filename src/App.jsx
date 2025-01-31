@@ -1,24 +1,18 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./components/Header";
+import Layout from "./components/Layout";
+import Shop from "./components/Shop";
 import Testimonials from "./components/Testimonials";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import MainContent from "./components/MainContent";
-import Hero from "./components/Hero";
-import Unique from "./components/Unique";
 
 function App() {
   return (
     <Router>
-      <Header />
       <Routes>
-        <Route path="/testimonials" element={<Testimonials />} />
+        <Route path="/" element={<Layout />}>
+          <Route path="/testimonials" element={<Testimonials />} />
+        </Route>
+
+        <Route path="/shop" element={<Shop />} />
       </Routes>
-      <Hero />
-      <MainContent />
-      <Unique />
-      <Testimonials />
-      <Footer />
     </Router>
   );
 }
