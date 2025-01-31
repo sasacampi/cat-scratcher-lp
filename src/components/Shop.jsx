@@ -200,42 +200,6 @@ const Shop = () => {
             ))}
           </div>
 
-          {/* i wanna change it later bc its not the way i want it to be */}
-          {selectedProduct && (
-            <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-              <div className="bg-white p-6 rounded-lg max-w-md w-full mx-4">
-                <img
-                  src={selectedProduct.image}
-                  alt={selectedProduct.name}
-                  className="w-full h-64 object-cover rounded-lg"
-                />
-                <h2 className="text-2xl font-bold mt-4">
-                  {selectedProduct.name}
-                </h2>
-                <p className="text-[#f47b25] text-xl mt-2">
-                  ${selectedProduct.price.toFixed(2)}
-                </p>
-                <div className="mt-4 space-y-2">
-                  <p>
-                    <strong>Material:</strong> {selectedProduct.material}
-                  </p>
-                  <p>
-                    <strong>Size:</strong> {selectedProduct.size}
-                  </p>
-                  <p>
-                    <strong>Color:</strong> {selectedProduct.color}
-                  </p>
-                </div>
-                <button
-                  onClick={() => setSelectedProduct(null)}
-                  className="mt-4 bg-[#f47b25] text-white px-4 py-2 rounded hover:bg-[#e56a14] transition-colors"
-                >
-                  Close
-                </button>
-              </div>
-            </div>
-          )}
-
           {/* this is the pagination and its non functional  */}
           <div className="flex items-center justify-center p-4">
             <a href="#" className="flex size-10 items-center justify-center">
