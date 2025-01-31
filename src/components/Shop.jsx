@@ -179,10 +179,10 @@ const Shop = () => {
 
           <div className="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
             {filteredProducts.map((product) => (
-              <div
+              <Link
+                to="/product"
                 key={product.id}
-                className="flex flex-col gap-3 pb-3 cursor-pointer"
-                onClick={() => setSelectedProduct(product)}
+                className="flex flex-col gap-3 pb-3 cursor-pointer hover:opacity-90 transition-opacity"
               >
                 <div
                   className="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
@@ -196,7 +196,7 @@ const Shop = () => {
                     ${product.price.toFixed(2)}
                   </p>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
 
