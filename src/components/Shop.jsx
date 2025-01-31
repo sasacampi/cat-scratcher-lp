@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Header from "./Header";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const Shop = () => {
   const [products, setProducts] = useState([]);
@@ -54,12 +55,12 @@ const Shop = () => {
       <div className="px-40 flex flex-1 justify-center py-5">
         <div className="layout-content-container flex flex-col max-w-[960px] flex-1">
           <div className="flex flex-wrap gap-2 p-4">
-            <a
+            <Link
+              to="/"
               className="text-[#9c6c49] text-base font-medium leading-normal"
-              href="#"
             >
               Home
-            </a>
+            </Link>
             <span className="text-[#9c6c49] text-base font-medium leading-normal">
               /
             </span>

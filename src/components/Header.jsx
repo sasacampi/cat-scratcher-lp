@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -47,19 +48,22 @@ const Header = () => {
             />
           </svg>
         </div>
-        <h2 className="text-2xl font-bold leading-tight tracking-[-0.015em]">
+        <Link
+          to="/"
+          className="text-2xl font-bold leading-tight tracking-[-0.015em]"
+        >
           Katz
-        </h2>
+        </Link>
       </div>
 
       <nav className="hidden md:flex items-center gap-8">
         <div className="flex items-center gap-9">
-          <a
-            href="#"
+          <Link
+            to="/shop"
             className="text-sm font-medium hover:text-[#e88630] transition-colors"
           >
             Shop
-          </a>
+          </Link>
           <a
             href="#"
             className="text-sm font-medium hover:text-[#e88630] transition-colors"
