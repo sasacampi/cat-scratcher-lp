@@ -14,10 +14,10 @@ const Unique = () => {
 
         <div className="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
           {[
-            "https://cdn.usegalileo.ai/sdxl10/8818c977-d6b7-44b6-8a94-674a9a2ae099.png",
-            "https://cdn.usegalileo.ai/sdxl10/b8c111f2-d430-4ba0-9315-1cf1e72ae62b.png",
-            "https://cdn.usegalileo.ai/sdxl10/253fee3d-8a3a-4bbf-b27c-6e13122a0130.png",
-            "https://cdn.usegalileo.ai/sdxl10/c561b9bb-dcfe-44b1-85db-eaaeab797b1f.png",
+            "https://cdn.usegalileo.ai/sdxl10/17ed968e-642c-4ca4-8136-cd9a5f108b71.png",
+            "https://cdn.usegalileo.ai/sdxl10/e26743eb-db76-4d25-a2ed-c34c0c9c8c13.png",
+            "https://cdn.usegalileo.ai/sdxl10/23ea9b0c-cd7b-499a-8366-d975eb8b5eb6.png",
+            "https://cdn.usegalileo.ai/sdxl10/4ae74a21-63f0-4333-9af0-896808da6997.png",
           ].map((imageUrl, index) => (
             <div key={index} className="flex flex-col gap-3">
               <div

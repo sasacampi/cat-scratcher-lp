@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 
 const StarRating = ({ rating }) => {
   return (
-    <div className="flex items-center gap-1">
+    <div className="flex items-center">
       {[...Array(5)].map((_, index) => (
         <svg
           key={index}
-          className={`w-6 h-6 ${
-            index < rating ? "text-[#e88630]" : "text-[#f3ede7]"
+          className={`w-5 h-5 ${
+            index < rating ? "text-[#ffb400]" : "text-[#f3ede7]"
           }`}
           fill="currentColor"
           viewBox="0 0 20 20"
@@ -23,25 +23,28 @@ const StarRating = ({ rating }) => {
 const Testimonials = () => {
   const testimonials = [
     {
-      name: "Maggie",
+      name: "Sharon",
       date: "Aug 12, 2025",
       rating: 5,
       text: "I'm so happy with my purchase. My cat loves it and it's so stylish, it looks great in my living room.",
-      avatar: "https://example.com/avatars/maggie.jpg",
+      avatar:
+        "https://cdn.leonardo.ai/users/8b69a4e3-755d-4960-8c7f-fe9de272cb01/generations/a2a59056-089e-4f46-a3ba-ec173744c7ae/segments/3:4:1/Flux_Dev_Highresolution_stock_photo_of_a_serene_Asian_girl_wit_2.jpeg",
     },
     {
-      name: "Linda",
+      name: "Clara",
       date: "July 31, 2025",
       rating: 5,
       text: "I bought the Snuggle for my senior cat and she loves it. She's been sleeping on it every day since it arrived. Great quality too!",
-      avatar: "https://example.com/avatars/maggie.jpg",
+      avatar:
+        "https://cdn.leonardo.ai/users/8b69a4e3-755d-4960-8c7f-fe9de272cb01/generations/28059378-2dfc-4c7d-ab1b-1a1be0fb5ad0/segments/1:4:1/Flux_Dev_Highresolution_stock_photo_of_a_young_adult_Asian_wom_0.jpeg",
     },
     {
-      name: "Sharon",
+      name: "Hannah",
       date: "July 25, 2025",
       rating: 5,
       text: "The Nook is perfect for my two cats, they both love it. It's very sturdy and well made.",
-      avatar: "https://example.com/avatars/maggie.jpg",
+      avatar:
+        "https://cdn.leonardo.ai/users/ff652081-5fed-4e79-a45b-72840f72f3db/generations/a272d8bb-7dcc-4530-a556-bc93e5bad654/segments/2:4:1/Flux_Dev_Highresolution_stock_photograph_of_a_young_Asian_girl_1.jpeg",
     },
   ];
 
@@ -62,9 +65,9 @@ const Testimonials = () => {
                 <img
                   src={testimonial.avatar}
                   alt={testimonial.name}
-                  className="w-12 h-12 rounded-full object-cover border-2 border-[#e88630] flex-shrink-0"
+                  className="w-12 h-12 rounded-full object-cover border-2 border-[#f47b25] flex-shrink-0"
                   onError={(e) => {
-                    e.target.src = `https://ui-avatars.com/api/?name=${testimonial.name}&background=e88630&color=fff`;
+                    e.target.src = `https://ui-avatars.com/api/?name=${testimonial.name}&background=ffb400&color=fff`;
                   }}
                 />
                 <div className="flex flex-col gap-2 flex-grow">
@@ -73,7 +76,7 @@ const Testimonials = () => {
                       <h3 className="text-lg font-bold text-[#1b140e]">
                         {testimonial.name}
                       </h3>
-                      <span className="text-sm text-[#97704e]">
+                      <span className="text-sm text-[#9c6c49]">
                         {testimonial.date}
                       </span>
                     </div>

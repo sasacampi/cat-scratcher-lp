@@ -77,7 +77,7 @@ const Header = () => {
             About
           </a>
         </div>
-        <button className="flex items-center justify-center rounded-full h-10 px-4 bg-[#e88630] text-sm font-bold hover:bg-[#d87a28] transition-colors">
+        <button className="flex items-center justify-center rounded-full h-10 px-4 bg-[#f47b25] text-white text-sm font-bold hover:bg-[#d87a28] transition-colors">
           Contact Us
         </button>
       </nav>
