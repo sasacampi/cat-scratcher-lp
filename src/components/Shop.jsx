@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 
 const Shop = () => {
   const [products, setProducts] = useState([]);
-  const [selectedProduct, setSelectedProduct] = useState(null);
   const [filters, setFilters] = useState({
     material: "All",
     minPrice: 0,
@@ -195,9 +194,11 @@ const Shop = () => {
             ))}
           </div>
 
-          {/* this is the pagination and its non functional  */}
           <div className="flex items-center justify-center p-4">
-            <a href="#" className="flex size-10 items-center justify-center">
+            <button
+              onClick={() => console.log("Previous page")}
+              className="flex size-10 items-center justify-center"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="18px"
@@ -207,21 +208,24 @@ const Shop = () => {
               >
                 <path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"></path>
               </svg>
-            </a>
+            </button>
             {[1, 2, 3, 4, 5].map((page) => (
-              <a
+              <button
                 key={page}
+                onClick={() => console.log(`Go to page ${page}`)}
                 className={`text-sm font-${
                   page === 1 ? "bold" : "normal"
                 } leading-normal flex size-10 items-center justify-center text-[#1c130d] rounded-full ${
                   page === 1 ? "bg-[#f4ece7]" : ""
                 }`}
-                href="#"
               >
                 {page}
-              </a>
+              </button>
             ))}
-            <a href="#" className="flex size-10 items-center justify-center">
+            <button
+              onClick={() => console.log("Next page")}
+              className="flex size-10 items-center justify-center"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="18px"
@@ -231,7 +235,7 @@ const Shop = () => {
               >
                 <path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path>
               </svg>
-            </a>
+            </button>
           </div>
         </div>
       </div>

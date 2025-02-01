@@ -64,25 +64,27 @@ const Header = () => {
           >
             Shop
           </Link>
-          <a
-            href="#"
+          <Link
+            to="/testimonials"
             className="text-sm font-medium hover:text-[#e88630] transition-colors"
           >
             Testimonials
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            to="/about"
             className="text-sm font-medium hover:text-[#e88630] transition-colors"
           >
             About
-          </a>
+          </Link>
         </div>
-        <button className="flex items-center justify-center rounded-full h-10 px-4 bg-[#f47b25] text-white text-sm font-bold hover:bg-[#d87a28] transition-colors">
+        <Link
+          to="/contact"
+          className="flex items-center justify-center rounded-full h-10 px-4 bg-[#f47b25] text-white text-sm font-bold hover:bg-[#d87a28] transition-colors"
+        >
           Contact Us
-        </button>
+        </Link>
       </nav>
 
-      {/* mobile ham button */}
       <button
         ref={buttonRef}
         onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -114,7 +116,6 @@ const Header = () => {
         </svg>
       </button>
 
-      {/* li menu */}
       <div
         ref={menuRef}
         className={`md:hidden absolute right-0 top-full mt-2 w-48 bg-white rounded-lg shadow-xl z-50 border border-gray-100 transition-all duration-200 ${
@@ -124,28 +125,31 @@ const Header = () => {
         }`}
       >
         <div className="flex flex-col py-2">
-          <a
-            href="#"
+          <Link
+            to="/shop"
             className="px-4 py-3 text-sm hover:bg-orange-50 hover:text-[#e88630] transition-colors"
           >
             Shop
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            to="/testimonials"
             className="px-4 py-3 text-sm hover:bg-orange-50 hover:text-[#e88630] transition-colors"
           >
             Testimonials
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            to="/about"
             className="px-4 py-3 text-sm hover:bg-orange-50 hover:text-[#e88630] transition-colors"
           >
             About
-          </a>
+          </Link>
           <div className="px-4 py-3 border-t border-gray-100 mt-2">
-            <button className="w-full text-sm bg-[#e88630] text-white py-2 rounded-full hover:bg-[#d87a28] transition-colors">
+            <Link
+              to="/contact"
+              className="w-full text-sm bg-[#e88630] text-white py-2 rounded-full hover:bg-[#d87a28] transition-colors block text-center"
+            >
               Contact Us
-            </button>
+            </Link>
           </div>
         </div>
       </div>
